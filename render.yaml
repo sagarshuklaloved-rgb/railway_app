@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: railway-app
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend core.core.wsgi:application
